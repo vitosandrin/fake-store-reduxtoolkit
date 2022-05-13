@@ -40,6 +40,7 @@ const Product = () => {
     //console.log("product", product)
 
     const renderProductDetails = () => {
+        const selectedProduct = product[product.length -1]
         return (
             <Wrapper>
                 <button product={product} onClick={() => addItemCart(product)}>clique aqui</button>
@@ -49,10 +50,9 @@ const Product = () => {
                     </>
                 ) : (
                     <div>
-                        <h1>{product.title}</h1>
+                        {selectedProduct.title}
                     </div>
                 )}
-
             </Wrapper>
         )
     }
