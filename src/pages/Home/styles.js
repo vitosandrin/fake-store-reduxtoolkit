@@ -41,7 +41,3 @@ export const GridContainer = styled.div`
     justify-content: center;
 `;
 
-export const ContainerSlider = styled.div`
-    display: flex;
-`;
-

@@ -1,29 +1,16 @@
 import React from "react";
-import { useSelector, useDispatch } from 'react-redux';
-import { removeItem } from '../../store/ducks/cart';
-import ItemCart from "../../components/ItemCart";
 
-const Cart = () => {
-    const cart = useSelector((state) => state.cart);
-    const dispatch = useDispatch();
+const CartPage = () => {
 
-    function removeItemCart(id) {
-        dispatch(removeItem(id));
-    }
-
-    return (
-        <div>
+    const renderList = () => {
+        return (
             <div>
-                {cart.lenght === 0 ? (
-                    <p>Sem Produtos no Carrinho</p>
-                ) : (
-                    <>
-                        {cart.map((product) => <ItemCart key={product.id} product={product} removeItemCart={removeItemCart} />)}
-                    </>
-                )}
+                <h1>haha</h1>
             </div>
-        </div>
-    )
+        );
+    };
+
+    return <>{renderList}</>
 }
 
-export default Cart;
+export default CartPage;
