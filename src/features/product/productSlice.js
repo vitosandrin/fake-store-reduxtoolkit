@@ -22,14 +22,15 @@ const initialState = {
     product: {},
 };
 
-const productSlice = createSlice({
-    name: "products",
+export const productSlice = createSlice({
+    name: 'products',
     initialState,
     reducers: {
-        setProducts: (state, action) => {
-            state.products = action.payload;
-        }
+        removeSingleProduct: (state) => {
+            state.product = {};
+        },
     },
+
     extraReducers: {
         [fetchAsyncProducts.pending]: () => {
             console.log("Pending");
@@ -41,14 +42,22 @@ const productSlice = createSlice({
         [fetchAsyncProducts.rejected]: () => {
             console.log("Rejected!");
         },
+        [fetchAsyncProduct.pending]: () => {
+            console.log("Pending");
+        },
         [fetchAsyncProduct.fulfilled]: (state, action) => {
             console.log("Fetched Successfully!");
             return { ...state, product: action.payload };
         },
+        [fetchAsyncProduct.rejected]: () => {
+            console.log("Rejected!");
+        },
     }
 });
 
-export const { setProducts } = productSlice.actions;
-export const getAllProducts = (state) => state.products;
-export const getSingleProduct = (state) => state.product;
+export const { removeSingleProduct } = productSlice.actions;
+
+export const getAllProducts = (state) => state.products.products;
+export const getSingleProduct = (state) => state.products.product;
+
 export default productSlice.reducer;

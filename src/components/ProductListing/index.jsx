@@ -12,7 +12,7 @@ const ProductListing = () => {
     const products = useSelector(getAllProducts);
 
     const renderList = products.map((product, index) => {
-        return(
+        return (
             <Container key={index} >
                 <ProductCard data={product} />
             </Container>
