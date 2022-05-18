@@ -16,7 +16,7 @@ const ProductDetail = () => {
         return () => {
             dispatch(removeSingleProduct());
         }
-    }, [dispatch])
+    }, [dispatch, id])
 
     const addItemToCart = (product) => {
         dispatch(addToCart(product))

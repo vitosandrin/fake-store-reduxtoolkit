@@ -1,11 +1,15 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { getAllDataCart } from "../../features/cart/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { getAllDataCart, removeFromCart } from "../../features/cart/cartSlice";
 
 const CartPage = () => {
-
     const cart = useSelector(getAllDataCart);
     console.log(cart)
+    const dispatch = useDispatch();
+
+    const removeDataFromCart = (id) => {
+        dispatch(removeFromCart(id));
+      };
 
     return (
         <div>
@@ -14,6 +18,8 @@ const CartPage = () => {
                     return (
                         <div key={product.id}>
                             <h1>{product.title}</h1>
+                            <h1>{product.description}</h1>
+                            <button onClick={() => removeDataFromCart(product.id)}>remove</button>
                         </div>
                     )
                 })}
