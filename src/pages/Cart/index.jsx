@@ -1,16 +1,25 @@
 import React from "react";
+import { useSelector } from "react-redux";
+import { getAllDataCart } from "../../features/cart/cartSlice";
 
 const CartPage = () => {
 
-    const renderList = () => {
-        return (
-            <div>
-                <h1>haha</h1>
-            </div>
-        );
-    };
+    const cart = useSelector(getAllDataCart);
+    console.log(cart)
 
-    return <>{renderList}</>
+    return (
+        <div>
+            <>
+                {cart.map((product) => {
+                    return (
+                        <div key={product.id}>
+                            <h1>{product.title}</h1>
+                        </div>
+                    )
+                })}
+            </>
+        </div>
+    )
 }
 
 export default CartPage;
