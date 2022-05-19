@@ -4,7 +4,6 @@ import { getAllDataCart, removeFromCart } from "../../features/cart/cartSlice";
 
 const CartPage = () => {
     const cart = useSelector(getAllDataCart);
-    console.log(cart)
     const dispatch = useDispatch();
 
     const removeDataFromCart = (id) => {

@@ -5,8 +5,8 @@ import { fetchAsyncProducts } from "../../features/product/productSlice";
 
 import { ProductListing } from "../../components";
 
-import { GridContainer, Menu, Title, Wrapper } from "./styles";
-import { Link } from "react-router-dom";
+import { Background, GridContainer, Wrapper } from "./styles";
+
 
 
 const Home = () => {
@@ -18,10 +18,8 @@ const Home = () => {
 
     return (
         <Wrapper>
-            <Menu>
-                <Title>fake-store</Title>
-            </Menu>
-            <Link to={'/cart'}>CARRRINHO</Link>
+            <Background />
+            <h1>All Products</h1>
             <GridContainer>
                 <ProductListing />
             </GridContainer>

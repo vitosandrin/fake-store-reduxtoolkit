@@ -3,11 +3,8 @@ import { Link } from 'react-router-dom';
 
 export const LinkA = styled(Link) `
     text-decoration: none;
-    color: grey;
+    color: ${(props) => props.theme.colors.text};
     transition: all 0.2s ease;
-    :hover{
-        color: black
-    }
 `;
 
 export const Wrapper = styled.div`
@@ -23,13 +20,12 @@ export const Card = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border: 1px solid grey;
+    border: 1px solid ${(props) => props.theme.colors.primary};
     background-color: white;
     transition: all 0.2s ease;
     padding: 10px;
     border-radius: 25px;
     :hover {
-        border: 1px solid black;
         transform: scale(1.1);
 }
 `;
@@ -46,6 +42,7 @@ export const Content = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: ${(props) => props.theme.colors.text};
 `;
 
 export const Title = styled.h1`

@@ -17,9 +17,18 @@ export const fetchAsyncProduct = createAsyncThunk(
     }
 );
 
+export const fetchAsyncCategory = createAsyncThunk(
+    'category/fetchAsyncCategory',
+    async () => {
+        const response = await api.get('/products/categories')
+        return response.data
+    }
+)
+
 const initialState = {
     products: [],
     product: {},
+    categories: [],
 };
 
 const productSlice = createSlice({
@@ -52,6 +61,9 @@ const productSlice = createSlice({
         [fetchAsyncProduct.rejected]: () => {
             console.log("Rejected!");
         },
+        [fetchAsyncCategory.fulfilled]: (state, action) => {
+            return {...state, categories: action.payload}
+        }
     }
 });
 
@@ -59,5 +71,6 @@ export const { removeSingleProduct } = productSlice.actions;
 
 export const getAllProducts = (state) => state.products.products;
 export const getSingleProduct = (state) => state.products.product;
+export const getAllCategories = (state) => state.products.categories;
 
 export default productSlice.reducer;
