@@ -9,24 +9,26 @@ export const Wrapper = styled.section`
     justify-content: space-around;
     height: 10vh;
     width: 80%;
-    border: 1px solid black;
     border-radius: 20px;
-    margin-top: 10px;
+    margin-top: 20px;
+    box-shadow: 0 6px 16px ${(props) => props.theme.colors.text};
+    font-family: ${(props) => props.theme.fonts.regular};
+    background-color: ${(props) => props.theme.colors.primary};
 `;
 
 export const ProductList = styled.div`
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
-    border: 1px solid black;
     height: 5vh;
-    padding: 20px;
 `;
 
-export const ProductCard = styled.div`
-
+export const ProductCard = styled.a`
+    color: white;
+    font-size: 1rem;
 `;
+
 
 
 

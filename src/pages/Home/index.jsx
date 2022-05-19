@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 
-import { fetchAsyncProducts } from "../../features/product/productSlice";
+import { fetchAsyncCategory, fetchAsyncProducts } from "../../features/product/productSlice";
 
-import { ProductListing } from "../../components";
+import { CategoryCard, ProductListing } from "../../components";
 
-import { Background, GridContainer, Wrapper } from "./styles";
+import { Background, GridContainer, Title, Wrapper } from "./styles";
 
 
 
@@ -14,12 +14,15 @@ const Home = () => {
 
     useEffect(() => {
         dispatch(fetchAsyncProducts());
+        dispatch(fetchAsyncCategory())
     }, [dispatch])
+
 
     return (
         <Wrapper>
             <Background />
-            <h1>All Products</h1>
+            <CategoryCard />
+            <Title>All Products</Title>
             <GridContainer>
                 <ProductListing />
             </GridContainer>

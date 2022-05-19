@@ -20,14 +20,17 @@ export const Background = styled.section`
     overflow-x: hidden;
 `;
 
-/*export const GridContainer = styled.div`
+/*
+IMPLEMENTAR DISPLAY GRID NA HR DE FAZER A RESPONSIVIDADE
+export const GridContainer = styled.div`
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     flex-wrap: wrap; //quebra a linha row em caso de overflow
     //flex-direction: row;
     align-items: center;
     justify-content: center;
-`;  IMPLEMENTAR DISPLAY GRID NA HR DE FAZER A RESPONSIVIDADE */
+`;   
+*/
 
 export const GridContainer = styled.div`
     display: flex;
@@ -35,5 +38,15 @@ export const GridContainer = styled.div`
     flex-direction: row;
     align-items: center;
     justify-content: center;
+`;
+
+export const Title = styled.h1`
+    display: flex;
+    text-align: center;
+    font-size: 3rem;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    color: ${(props) => props.theme.colors.text};
+    padding: 45px;
 `;
 

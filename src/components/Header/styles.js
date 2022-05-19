@@ -11,6 +11,7 @@ export const Wrapper = styled.section`
     width: 100%;
     background-color: ${(props) => props.theme.colors.primary};
     font-family: ${(props) => props.theme.fonts.regular};
+    box-shadow: 0 3px 8px ${(props) => props.theme.colors.text};
 `;
 export const Title = styled.h2`
     color: white;

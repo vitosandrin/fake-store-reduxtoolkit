@@ -18,6 +18,7 @@ const CartPage = () => {
                         <div key={product.id}>
                             <h1>{product.title}</h1>
                             <h1>{product.description}</h1>
+                            <img src={product.image} />
                             <button onClick={() => removeDataFromCart(product.id)}>remove</button>
                         </div>
                     )

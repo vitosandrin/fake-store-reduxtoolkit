@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 
-export const LinkA = styled(Link) `
+export const LinkA = styled(Link)`
     text-decoration: none;
     color: ${(props) => props.theme.colors.text};
     transition: all 0.2s ease;
@@ -20,14 +20,14 @@ export const Card = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    border: 1px solid ${(props) => props.theme.colors.primary};
     background-color: white;
     transition: all 0.2s ease;
     padding: 10px;
     border-radius: 25px;
+    box-shadow: 0 2px 10px ${(props) => props.theme.colors.primary};
     :hover {
         transform: scale(1.1);
-}
+    }
 `;
 
 export const CardImage = styled.img`
