@@ -14,14 +14,13 @@ const ProductCart = (props) => {
         dispatch(removeFromCart(id));
     };
 
-
     return (
         <Wrapper>
             <Content key={data.id}>
                 <Image src={data.image} />
-                <Title>{data.title}</Title>
-                <Price>U$ {data.price}</Price>
-                <Button onClick={() => removeDataFromCart(data.id)}>remove from cart</Button>
+                <Title>{data.title.substring(0,19)}</Title>
+                <Price>U$ {data.price.toFixed(2)}</Price>
+                <Button onClick={() => removeDataFromCart(data.id)}>remove</Button>
             </Content>
         </Wrapper>
     )

@@ -9,8 +9,8 @@ const ProductCard = (props) => {
                 <Card key={data.id}>
                     <CardImage src={data.image} alt={data.title} />
                     <Content>
-                        <Title>{data.title}</Title>
-                        <Price>U${data.price}</Price>
+                        <Title>{data.title.substring(0,19)}</Title>
+                        <Price>U${data.price.toFixed(2)}</Price>
                     </Content>
                 </Card>
             </LinkA>

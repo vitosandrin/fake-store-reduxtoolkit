@@ -22,7 +22,7 @@ const ProductDetail = () => {
     const addItemToCart = (product) => {
         dispatch(addToCart(product))
     }
-
+//MANUTENÇÃO: PASSAR PRODUCT COMO DATA=PROPS PARA ACESSAR FUNÇÕES TOFIXED E SUBSTRING
     return (
         <Container>
             <Image src={product.image} />
