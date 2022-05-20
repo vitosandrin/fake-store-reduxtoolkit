@@ -14,7 +14,6 @@ const ProductCard = (props) => {
                     </Content>
                 </Card>
             </LinkA>
-
         </Wrapper>
     )
 };

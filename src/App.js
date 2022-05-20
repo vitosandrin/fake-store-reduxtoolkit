@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Reset } from "styled-reset";
 import { ThemeProvider } from "styled-components";
 import { Header } from "./components";
+import 'react-loading-skeleton/dist/skeleton.css'
+
 
 import { HomePage, ProductPage, CartPage } from "./pages";
 import theme from "./theme";

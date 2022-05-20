@@ -3,7 +3,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { fetchAsyncProduct, getSingleProduct, removeSingleProduct } from "../../features/product/productSlice";
 import { addToCart } from '../../features/cart/cartSlice'
-import { Container, Title, Image, Content } from "./styles";
+import { Container, Title, Image, Content, Description, Button, Price } from "./styles";
+
 
 const ProductDetail = () => {
 
@@ -27,8 +28,9 @@ const ProductDetail = () => {
             <Image src={product.image} />
             <Content>
                 <Title>{product.title}</Title>
-                <Title>{product.description}</Title>
-                <button onClick={() => addItemToCart(product)}>cart</button>
+                <Description>{product.description}</Description>
+                <Price>U$ {product.price}</Price>
+                <Button onClick={() => addItemToCart(product)}>add to cart</Button>
             </Content>
         </Container>
     )

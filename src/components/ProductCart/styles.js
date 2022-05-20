@@ -2,27 +2,18 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-`;
-
-export const Container = styled.div`
-    display: flex;
-    position: absolute;
-    justify-content: space-around;
-    align-items: center;
-    padding: 25px;
-    margin-top: 100px;
+    justify-content: center;
+    padding: 50px;
     font-family: ${(props) => props.theme.fonts.regular};
 `;
 
 export const Content = styled.div`
     display: flex;
-    height: 50vh;
-    width: 40%;
+    height: 40vh;
+    width: 65vw;
+    margin-top: 50px;
     padding: 20px;
     border-radius: 20px;
-    flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: space-around;
@@ -33,28 +24,18 @@ export const Content = styled.div`
 export const Title = styled.h1`
     color: ${(props) => props.theme.colors.strong};
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.4rem;
+    max-width: 30%;
 `;
 
 export const Price = styled.h1`
     color: ${(props) => props.theme.colors.strong};
-    font-weight: bold;
-    font-size: 2rem;
-`;
-
-export const Description = styled.p`
-    color: ${(props) => props.theme.colors.text};
-    border-radius: 10px;
-    padding: 5px;
+    font-size: 1.2rem;
 `;
 
 export const Image = styled.img`
-    max-width: 45vw;
-    max-height: 45vh;
-    transition: all 0.2s ease;
-    :hover{
-        transform: scale(1.1);
-    }
+    max-width: 40vw;
+    max-height: 40vh;
 `;
 
 export const Button = styled.div`
@@ -64,8 +45,8 @@ export const Button = styled.div`
     justify-content: center;
     border-radius: 20px;
     height: 40px;
-    width: 120px;
-    padding: 3px;
+    width: 150px;
+    padding: 7px;
     font-size: 1.3rem;
     color: ${(props) => props.theme.colors.text};
     transition: all 0.2s ease;

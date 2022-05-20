@@ -1,6 +1,7 @@
-import React, { useEffect } from "react";
-import { ProductDetail } from "../../components/index";
-import { Wrapper, Image, Container, Description, AddButton } from "./styles";
+import React from "react";
+import { ProductDetail } from "../../components";
+import { Wrapper } from "./styles";
+
 
 const Product = () => {
 
